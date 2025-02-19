@@ -3,6 +3,7 @@
 
 //Exercise 3: JavaScript Basics part 1
 
+//This function accept 2 string parameters and validate them
 function validatePassword(string1, string2) {
 	var condition1 = false;
 	if(string1 == string2) {
@@ -52,6 +53,7 @@ console.log(validatePassword("Hello1234","Hello1234"));
 console.log(validatePassword("HELLO1234","HELLO1234"));
 console.log(validatePassword("pass1234","pass1234"));
 
+//This function returns a reversed string of the password
 function reversePassword(password) {
 	var reversedPassword = "";
 	var characters = password.length;
@@ -65,6 +67,10 @@ function reversePassword(password) {
 };
 console.log(reversePassword("hello"));
 
+//This function that takes three parameters: name and two passwords. and return an object.
+//The object contains the name and the newpassword as keys. 
+//If the passwords provided by the user are valid, the reverse function will be the value of newpassword. 
+//If not, then the value of newpassword is the first given password
 function storePassword(username, password1, password2) {
 	if(validatePassword(password1, password2) == true) {
 		var newp = reversePassword(password1)
@@ -87,4 +93,4 @@ storePassword("Lie", "PASS1234", "PASS1234")
 storePassword("Baring", "Denchlie1234", "Denchlie1234")
 
 
-//References: https://stackoverflow.com/questions/1027224/how-can-i-test-if-a-letter-in-a-string-is-uppercase-or-lowercase-using-javascrip
+//References: https://www.shiksha.com/online-courses/articles/relational-operators-in-java-about-types-and-examples-blogId-148181
